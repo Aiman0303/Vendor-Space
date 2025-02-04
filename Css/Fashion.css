@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.banner {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #b5fffb;
+    padding-bottom: 50px;
+}
+.navibar {
+    
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Logo {
+    width: 120px;
+    cursor: pointer;
+}
+.navibar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navibar ul li a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+.navibar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: white;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.7s;
+}
+.navibar ul li:hover:after {
+    width: 100%;
+}
+
+.container {
+    padding: 10px;
+    display: flex;
+    width: 600px;
+    height: 300px;
+    margin: auto;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: 1s;
+    position: relative; /* Add this to position the wrapper absolutely */
+}
+
+.image {
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+
+.info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+ 
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 2px; /* Add margin for spacing */
+}
+
+.location, .time, .price {
+    font-size: 18px;
+    margin: 10px 0; /* Add 2px margin for spacing */
+}
+
+.container:hover {
+    transform: scale(1.05);
+    z-index: 0; /* Lower z-index on hover to keep the wrapper above */
+}
+
+button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #000000;
+    background: transparent;
+    color: #000000;
+    cursor: pointer;
+    position: relative;
+    transition: 0.5s;
+}
+button:hover {
+    border-color: rgb(255, 255, 255);
+}
+
+#logoutButton, #loginButton {
+    background-color: #4ca3af; /* Green background */
+    color: rgb(0, 0, 0); /* White text */
+    border: none; /* No borders */
+    padding: 10px 20px; /* Top-bottom and left-right padding */
+    width: 100px;
+    text-align: center;
+    text-decoration: none; /* Removes underline */
+    display: inline-block;
+    font-size: 11px;
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 20px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+#logoutButton:hover{
+    transition: 0.2s ease-in-out;
+    transform: scale(1.05);
+    color: red;
+}
+
+#loginButton:hover{
+    transition: 0.2s ease-in-out;
+    transform: scale(1.05);
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    position: absolute; /* Position it absolutely within the info section */
+    bottom: 20px; /* Adjust this value to move the wrapper up */
+    left: 73%; /* Center it horizontally */
+    transform: translateX(-50%); /* Center the wrapper */
+}
+.wrapper .button {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    text-decoration: none;
+    margin: 0 5px;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-out;
+  }
+  .wrapper .button:hover {
+    width: 200px;
+  }
+  .wrapper .button .icon {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    color: #000;
+    text-align: center;
+    border-radius: 50px;
+    box-sizing: border-box;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+  }
+  .wrapper .button:nth-child(1):hover .icon {
+    background: #25D366;
+  }
+  .wrapper .button:nth-child(2):hover .icon {
+    background: #E1306C;
+  }
+  .wrapper .button .icon i {
+    font-size: 25px;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+  }
+  .wrapper .button:hover .icon i {
+    color: #fff;
+  }
+  .wrapper .button span {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 60px;
+    margin-left: 10px;
+    transition: all 0.3s ease-out;
+  }
+  .wrapper .button:nth-child(1) span {
+    color: #25D366;
+  }
+  .wrapper .button:nth-child(2) span {
+    color: #E1306C;
+  }

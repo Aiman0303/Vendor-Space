@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0%;
+    font-family:sans-serif;
+}
+.banner{
+    width: 100%;
+    height: auto; /* Set a fixed height for the banner */
+    background-image: url('../img/bg.png'); /* Adjusted path */
+    background-size: cover; /* Cover the entire banner area */
+    background-position: center; /* Center the background image */
+    padding-bottom: 50px;
+}
+.navibar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Logo{
+    width: 120px;
+    cursor: pointer;
+    
+}
+.navibar ul li{
+    list-style: none;
+    display: inline-block;
+    margin:0 20px;
+    position: relative;
+}
+.navibar ul li a{
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+.navibar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: white;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.7s;
+}
+
+.navibar ul li:hover:after{
+   width: 100%;
+}
+
+#upload_container{
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    background: #76cfcf;
+    width: 50%;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 20px 35px rgba(0,0,1,0,9);
+}
+
+
+#upload_container form{
+    display: flex;
+    flex-direction: column;
+}
+
+#upload_container form input{
+    padding: 8px;
+    outline: none;
+    border: 1px solid rgb(0, 0, 0);
+    margin-bottom: 8px;
+}
+
+#upload_container form input[type="submit"]{
+    background-color: white;
+    border: none;
+}
+
+#upload_container form input[type="submit"]:hover{
+    background-color: lightblue;
+    cursor: pointer;
+    border: 1px solid lightblue;
+
+}
+
+#cat{
+    padding: 8px;
+    margin-bottom: 8px;
+}
+
+button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #000000;
+    background: transparent;
+    color: #000000;
+    cursor: pointer;
+    position: relative;
+    transition: 0.5s;
+}
+button:hover {
+    border-color: rgb(255, 255, 255);
+}
+
+#logoutButton, #loginButton {
+    background-color: #4ca3af; 
+    color: rgb(0, 0, 0); 
+    border: none; 
+    padding: 10px 20px; 
+    width: 100px;
+    text-align: center;
+    text-decoration: none; 
+    display: inline-block;
+    font-size: 11px;
+    cursor: pointer; 
+    border-radius: 20px;
+    transition: background-color 0.3s ease; 
+}
+
+#logoutButton:hover{
+    transition: 0.2s ease-in-out;
+    transform: scale(1.05);
+    color: red;
+}
+
+#loginButton:hover{
+    transition: 0.2s ease-in-out;
+    transform: scale(1.05);
+}

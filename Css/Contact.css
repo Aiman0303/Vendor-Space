@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.banner {
+    width: 100%;
+    min-height: 100vh; /* Full viewport height */
+    background-image: url('../img/bg.png');
+    background-size: cover;
+    background-position: center;
+}
+.navibar {
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navibar h3{
+    margin-left: 10px;
+}
+.Logo {
+    width: 120px;
+    cursor: pointer;
+}
+
+.navibar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navibar ul li a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+.navibar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: white;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.7s;
+}
+.navibar ul li:hover:after {
+    width: 100%;
+}
+#logoutButton, #loginButton {
+    background-color: #4ca3af; /* Green background */
+    color: rgb(0, 0, 0); /* White text */
+    border: none; /* No borders */
+    padding: 10px 20px; /* Top-bottom and left-right padding */
+    width: 100px;
+    text-align: center;
+    text-decoration: none; /* Removes underline */
+    display: inline-block;
+    font-size: 11px;
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 20px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+#logoutButton:hover{
+    transition: 0.2s ease-in-out;
+    transform: scale(1.05);
+    color: red;
+}
+
+#loginButton:hover{
+    transition: 0.2s ease-in-out;
+    transform: scale(1.05);
+}
+.contact-container {
+    width: auto;
+    height: auto; /* Allow height to adjust based on content */
+    display: flex;
+    flex-direction: row; /* Align items in a row */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between the two sides */
+    padding: 40px; /* Add padding for better spacing */
+    margin-left: 50vh;
+}
+
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start */
+    gap: 20px;
+    flex: 1; /* Allow this section to grow */
+}
+
+.contact-left-title h2 {
+    font-weight: 600;
+    color: #000000;
+    font-size: 2.5rem; /* Responsive font size */
+    margin-bottom: 5px;
+}
+
+.contact-left-title hr {
+    border: none;
+    width: 120px;
+    height: 5px;
+    background-color: #43aca6;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-inputs {
+    width: 100%; /* Full width */
+    max-width: 400px; /* Set a max width */
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: #666;
+    border-radius: 50px;
+}
+
+.contact-left textarea {
+    width: 100%; /* Full width */
+    max-width: 400px; /* Set a max width */
+    height: 140px;
+    padding-top: 15px;
+    border-radius: 20px;
+}
+
+.contact-inputs:focus {
+    border: 2px solid #ff994f;
+}
+
+.contact-inputs::placeholder {
+    color: #a9a9a9;
+}
+
+.contact-left button {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #fff;
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(270deg, #ff994f, #fa6d86);
+    cursor: pointer;
+}
+
+.contact-left button img {
+    height: 15px;
+}
+
+.contact-right {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    padding: 20px; /* Adjust padding for better spacing */
+    flex: 1; /* Allow this section to grow */
+    margin-right: 100px;
+}
+
+.contact-right img {
+    width: 100%; /* Responsive image */
+    max-width: 500px; /* Set a max width */
+}
+
+@media (max-width: 800px) {
+    .contact-container {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        padding: 20px; /* Adjust padding */
+    }
+
+    .contact-left {
+        align-items: center; /* Center items in the left section */
+    }
+
+    .contact-right {
+        display: none; /* Hide the right section on smaller screens */
+    }
+
+    .contact-inputs {
+        width: 80vw; /* Full width on smaller screens */
+    }
+}
+
+.Contact-detail {
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+    gap: 70px; /* Space between each contact item */
+    align-items: flex-start; /* Aligns items to the left */
+    text-align: left; /* Ensures text aligns to the left */
+}
+
+.contact-item {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    gap: 10px; /* Space between icon and text */
+}
+
+.Contact-detail i {
+    font-size: 30px; /* Icon size */
+    color: #000000; /* Icon color */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.Contact-detail i:hover {
+    color: #ffffff; /* Change color on hover for better interactivity */
+}
+
+.Contact-detail p {
+    font-size: 20px; /* Text size */
+    margin: 10px; /* Removes default margin */
+    color: #000; /* Text color */
+    line-height: 1.5; /* Improves readability */
+}

@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('../img/bg.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Align items to left and right */
+    align-items: center; /* Align vertically */
+    padding: 20px;
+}
+
+h1{
+    margin-top: 60px;
+    color: #343a40;
+    text-align: center;
+}
+
+h2, h3 {
+    color: #343a40;
+    text-align: center;
+}
+
+table {
+    width: 90%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    align-items: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #dee2e6;
+    border-right: 1px solid #dee2e6;
+}
+
+th {
+    background-color: #0fb3be;
+    color: #fff;
+    font-weight: bold;
+}
+
+td {
+    background-color: #f8f9fa;
+}
+
+tr:hover td {
+    background-color: #f1f3f5;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="file"],
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="file"]:focus {
+    outline: none;
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+/* Buttons */
+button, .admin-btn, .logout-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+button:hover, .admin-btn:hover, .logout-btn:hover {
+    background-color: #0056b3;
+}
+
+#Logout {
+    display: flex;
+    width: auto;
+    margin: 20px auto;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#Logout:hover {
+    background-color: #0056b3;
+}
